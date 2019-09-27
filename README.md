@@ -49,7 +49,9 @@ local trailTouch = SimpleTrail.newTrail({tex = "trail_touch.png", numPoints = 20
 
 `widthFinal` (**string**) : final width of the trail (if ommited, `widthFinal` = `width`)
 
-### update
+# Methods
+
+### trail:update(object, parent)
 ```
 trail:update(object, parent)
 ```
@@ -58,14 +60,14 @@ trail:update(object, parent)
 
 `parent` (**GroupObject**) : the display group where you want your trail to be rendered. You can use the default corona display object display.getCurrentStage() or object.parent
 
-### setTexture
+### trail:setTexture(filePath)
 ```
 trail:setTexture(filePath)
 ```
 #### Parameters
 `filePath` (**String**) : filename of the new texture
 
-### setFillColor
+### trail:setFillColor(...)
 Change the color of the trail. Similar to Corona `:setFillColor()` function.
 ```
 trail:setFillColor(r,g,b,a)
@@ -79,20 +81,20 @@ or
 trail:setFillColor(r,g,b)
 ```
 
-### toFront
+### trail:toFront()
 ```
 trail:toFront()
 ```
 Put the trail to the front of it's parent display group.
 
-### toBack
+### trail:toBack()
 ```
 trail:toBack()
 ```
 Put the trail to the back of it's parent display group.
 
-### clear
+### trail:clear()
 ```
 trail:clear()
 ```
-remove the trail from it's parent display group.
+Remove the trail from it's parent display group.
