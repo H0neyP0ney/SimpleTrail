@@ -42,13 +42,13 @@ local trailTouch = SimpleTrail.newTrail({tex = "trail_touch.png", numPoints = 20
 
 #### Parameters
 
-`numPoints` (number) : this is the keyframes 
+`numPoints` (**number**) : this is the keyframes 
 
-`tex` (string) : filename of the trail texture
+`tex` (**string**) : filename of the trail texture
 
-`width` (string) : width of the trail
+`width` (**string**) : width of the trail
 
-`widthFinal` (string) : final width of the trail (if ommited, `widthFinal` = `width`)
+`widthFinal` (**string**) : final width of the trail (if ommited, `widthFinal` = `width`)
 
 ### Draw a trail
 ```
