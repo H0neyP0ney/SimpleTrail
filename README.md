@@ -51,19 +51,17 @@ local trailTouch = SimpleTrail.newTrail({tex = "trail_touch.png", numPoints = 20
 
 ### update
 ```
-trail:update(object, layer)
+trail:update(object, parent)
 ```
-
 #### Parameters
-`object` (GroupObject) : this is the keyframes
+`object` (**GroupObject**) : the object you want the trail to follow
 
-`layer` (GroupObject) : the display group where you want your trail to be rendered. You can use the default corona display object display.getCurrentStage() or object.parent
+`parent` (**GroupObject**) : the display group where you want your trail to be rendered. You can use the default corona display object display.getCurrentStage() or object.parent
 
 ### setTexture
 ```
 trail:setTexture(filePath)
 ```
-
 #### Parameters
 `filePath` (**String**) : filename of the new texture
 
@@ -93,3 +91,8 @@ trail:toBack()
 ```
 Put the trail to the back of it's parent display group.
 
+### clear
+```
+trail:clear()
+```
+remove the trail from it's parent display group.
