@@ -34,5 +34,5 @@ local trail = SimpleTrail.newTrail()
 
 ### Change trail color
 ```
-SimpleTrail.setFillColor(r,g,b,a)
+SimpleTrail:setFillColor(r,g,b,a)
 ```
