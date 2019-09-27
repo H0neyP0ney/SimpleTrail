@@ -41,13 +41,29 @@ local trailTouch = SimpleTrail.newTrail({tex = "trail_touch.png", numPoints = 20
 ```
 
 #### Parameters
-`numPoints` (**number**) : this is the keyframes 
+`numPoints` (**Number**) : this is the keyframes 
 
-`tex` (**string**) : filename of the trail texture
+`tex` (**String**) : filename of the trail texture
 
-`width` (**string**) : width of the trail
+`width` (**Number**) : width of the trail
 
-`widthFinal` (**string**) : final width of the trail (if ommited, `widthFinal` = `width`)
+`widthFinal` (**Number**) : final width of the trail (if ommited, `widthFinal` = `width`)
+
+`offsetX` (**Number**) : width of the trail
+
+`offsetY` (**Number**) : width of the trail
+
+`alpha` (**Number**) : width of the trail
+
+`scrollSpeed` (**Number**) : width of the trail
+
+`blendMode` (**String**) : width of the trail
+
+`isVisible` (**Boolean**) : width of the trail
+
+`sharp` (**Number**) : width of the trail
+
+All of these parameters can be changed dynamically but might requires another call of `trail:update()` to be effective.
 
 # Methods
 
