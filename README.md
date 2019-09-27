@@ -29,7 +29,7 @@ settings =
 
 # Functions
 
-### newTrail( [option] )
+### newTrail( [optionnalTable] )
 ```
 local trail = SimpleTrail.newTrail()
 ```
