@@ -27,10 +27,28 @@ settings =
 }
 ```
 
+# Functions
+
 ### Create a trail
 ```
 local trail = SimpleTrail.newTrail()
 ```
+This is how a basic trail is created.
+Some parameters can be added like this:
+
+```
+local trailTouch = SimpleTrail.newTrail({tex = "trail_touch.png", numPoints = 20, width = 18, widthFinal = 0, sharp = true})
+```
+
+#### Parameters
+
+`numPoints` (number) : this is the keyframes 
+
+`tex` (string) : filename of the trail texture
+
+`width` (string) : width of the trail
+
+`widthFinal` (string) : final width of the trail (if ommited, `widthFinal` = `width`)
 
 ### Change trail color
 ```
