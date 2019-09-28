@@ -41,37 +41,42 @@ local trailTouch = SimpleTrail.newTrail({tex = "trail_touch.png", numPoints = 20
 ```
 
 ### Parameters:
-`numPoints` (**Number**) : this is the keyframes 
+`numPoints` (**Number**) : number of last keyframes positions used to record the trail. The bigger the number, the longer the trail.
 
-`tex` (**String**) : filename of the trail texture
+`tex` (**String**) : filename of the trail texture (default is `nil`).
 
-`width` (**Number**) : width of the trail
+`width` (**Number**) : width of the trail (default is `20`).
 
 `widthFinal` (**Number**) : final width of the trail (if ommited, `widthFinal` = `width`)
 
-`offsetX` (**Number**) : width of the trail
+`offsetX` (**Number**) : X offset component of the trail (default is `0`).
 
-`offsetY` (**Number**) : width of the trail
+`offsetY` (**Number**) : Y offset component of the trail (default is `0`).
 
-`alpha` (**Number**) : width of the trail
+`alpha` (**Number**) : Alpha of the display object trail (default is `1`).
 
-`scrollSpeed` (**Number**) : width of the trail
+`scrollSpeed` (**Number**) : Use this parameter to scroll the texture of the trail (default is `0`). Requires power of 2 texture file.
 
-`blendMode` (**String**) : width of the trail
+`blendMode` (**String**) : Blend mode similar to Corona API (default is `"normal"`).
 
-`isVisible` (**Boolean**) : width of the trail
+`isVisible` (**Boolean**) : Use this to hide/show the trail (default is `true`). The trail calculation will be done but not rendered.
 
-`sharp` (**Number**) : width of the trail
+`sharp` (**Boolean**) : If true, the start of the trail is a dot and not a segment (default is `false`).
 
-`color_r` (**Number**) : width of the trail
+`color` (**Table**) : color table similar to Corona colors. {r,g,b,a} or {r,g,b} or {c}
 
-`color_g` (**Number**) : width of the trail
+`color_r` (**Number**) : Red component of trail color (default is `1`).
 
-`color_b` (**Number**) : width of the trail
+`color_g` (**Number**) : Green component of trail color (default is `1`).
 
-`color_a` (**Number**) : width of the trail
+`color_b` (**Number**) : Blue component of trail color (default is `1`).
 
-All of these parameters can be changed dynamically but might requires another call of `trail:update()` to be effective.
+`color_a` (**Number**) : Alpha component of trail color (default is `1`).
+
+### NOTES:
+* All of these parameters except `numPoints`, `tex` and `color` can be accessed and changed dynamically but might requires another call of `trail:update()` to be effective.
+* You can change color dynamically by using `trail:setFillColor(...)` method or by changing `color_r`, `color_g`, `color_b`, `color_a` directly.
+* You can't change `scrollSpeed` if you did not initialized the trail with this parameter specified. Althought, you might want a trail to scroll after a moment, so you just have to initialized with `scrollSpeed` equal to 0.
 
 # Methods
 
@@ -79,6 +84,8 @@ All of these parameters can be changed dynamically but might requires another ca
 ```
 trail:update(object, parent)
 ```
+This method actually draws the trail according to `object` last positions to the front of `parent` display group. Use this inside an enterFrame event.
+
 ### Parameters:
 `object` (**GroupObject**) : the object you want the trail to follow
 
@@ -100,11 +107,11 @@ trail:setFillColor(r,g,b,a)
 ```
 or
 ```
-trail:setFillColor(c)
+trail:setFillColor(r,g,b)
 ```
 or
 ```
-trail:setFillColor(r,g,b)
+trail:setFillColor(c)
 ```
 
 
