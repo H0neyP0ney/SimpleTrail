@@ -32,4 +32,14 @@ settings =
 			},
 		},
 	},
+
+	plugins =
+	{
+		-- key is the name passed to Lua's 'require()'
+		["plugin.SimpleTrail"] =
+		{
+			-- required
+			publisherId = "com.honeyponeygames",
+		},
+	},
 }
