@@ -86,7 +86,7 @@ local trailTouch = SimpleTrail.newTrail({tex = "trail_touch.png", numPoints = 20
 ```
 trail:update(object, parent)
 ```
-This method actually draws the trail according to `object` last positions to the front of `parent` display group. Use this inside an enterFrame event.
+This method actually draws the trail according to `object` last positions to the front of `parent` display group. Use this inside an enterFrame event as the render will be refreshed every frame according to the new `object` keyframe position.
 
 ### Parameters:
 `object` (**GroupObject**) : the object you want the trail to follow
