@@ -91,7 +91,7 @@ This method actually draws the trail according to `object` last positions to the
 ### Parameters:
 `object` (**GroupObject**) : the object you want the trail to follow
 
-`parent` (**GroupObject**) : the display group where you want your trail to be rendered. You can use the default corona display object display.getCurrentStage() or object.parent
+`parent` (**GroupObject**) : the display group where you want your trail to be rendered. If ommited the trail will be added in `object.parent` display group.
 
 
 ## trail:setTexture(filePath)
