@@ -78,7 +78,7 @@ local trailTouch = SimpleTrail.newTrail({tex = "trail_touch.png", numPoints = 20
 ### NOTES:
 * All of these parameters except `numPoints`, `tex` and `color` can be accessed and changed dynamically but might requires another call of `trail:update()` to be effective.
 * You can change color dynamically by using `trail:setFillColor(...)` method or by changing `color_r`, `color_g`, `color_b`, `color_a` directly.
-* You can't change `scrollSpeed` if you did not initialized the trail with this parameter specified. Althought, you might want a trail to scroll after a moment, so you just have to initialized with `scrollSpeed` equal to 0.
+* You can't change `scrollSpeed` if you did not initialized the trail with this parameter specified. Althought, you might want a normal trail to scroll only after a moment, so you just have to initialized with `scrollSpeed` equal to 0 so that the plugin understands this will be a scrolling trail and can initialise texture properly.
 
 # Methods
 
