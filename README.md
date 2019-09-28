@@ -5,9 +5,9 @@ The SimpleTrail plugin can be used in your Corona project. It allows you to atta
 
 This repository contains a Corona project with 5 different examples showing what you can achieve with the plugin.
 
-[HTML5 version](http://honeyponey.fr/SHARED/SimpleTrail/)
+[HTML5 DEMO](http://honeyponey.fr/SHARED/SimpleTrail/)
 
-[Demo video](https://youtu.be/C68if9dVEho)
+[VIDEO TRAILER](https://youtu.be/C68if9dVEho)
 
 # Project Configuration
 ## Corona Store Activation
