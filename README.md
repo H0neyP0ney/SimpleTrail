@@ -7,7 +7,7 @@ The SimpleTrail plugin can be used in your Corona project. It allows you to atta
 ## Corona Store Activation
 In order to use this plugin, you must activate the plugin at the Corona Store.
 
-##SDK
+## SDK
 When you build using the Corona Simulator, the server automatically takes care of integrating the plugin into your project.
 
 All you need to do is add an entry into a plugins table of your build.settings. The following is an example of a minimal build.settings file:
