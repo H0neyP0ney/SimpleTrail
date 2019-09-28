@@ -76,12 +76,14 @@ trail:update(object, parent)
 
 `parent` (**GroupObject**) : the display group where you want your trail to be rendered. You can use the default corona display object display.getCurrentStage() or object.parent
 
+
 ## trail:setTexture(filePath)
 ```
 trail:setTexture(filePath)
 ```
 ### Parameters
 `filePath` (**String**) : filename of the new texture
+
 
 ## trail:setFillColor(...)
 Change the color of the trail. Similar to Corona `:setFillColor()` function.
@@ -97,17 +99,20 @@ or
 trail:setFillColor(r,g,b)
 ```
 
+
 ## trail:toFront()
 ```
 trail:toFront()
 ```
 Put the trail to the front of it's parent display group.
 
+
 ## trail:toBack()
 ```
 trail:toBack()
 ```
 Put the trail to the back of it's parent display group.
+
 
 ## trail:clear()
 ```
