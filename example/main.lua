@@ -105,7 +105,7 @@ local function initView1(event)
 			sprite1.xScale = 0.2
 		end
 
-		trailSprite1:update(sprite1, sprite1.parent)
+		trailSprite1:update(sprite1)
 		sprite1:toFront()
 	end
 end
@@ -141,7 +141,7 @@ local function initView2(event)
 
 	--update listener
 	viewDisplayGroup.onEnterFrame = function(event)
-		trailTouch:update(touchObject, viewDisplayGroup)
+		trailTouch:update(touchObject)
 	end
 end
 
@@ -217,7 +217,7 @@ local function initView3(event)
 
 			p.lifeTime = p.lifeTime - 1
 
-			p.trail:update(p, p.parent)
+			p.trail:update(p)
 
 			if p.lifeTime <= -10 then
 				p:removeSelf()
@@ -253,9 +253,9 @@ local function initView4(event)
 		ship.y = display.contentCenterY + math.sin(ship.timer) * 95 - 25
 		ship.rotation = math.deg(ship.timer)+180
 
-		trailShip1:update(ship, viewDisplayGroup)
-		trailShip2:update(ship, viewDisplayGroup)
-		trailShip3:update(ship, viewDisplayGroup)
+		trailShip1:update(ship)
+		trailShip2:update(ship)
+		trailShip3:update(ship)
 
 		ship:toFront()
 	end
@@ -316,7 +316,7 @@ local function initView5(event)
 		end
 
 		--draw trail
-		trailBall8:update(ball8, viewDisplayGroup)
+		trailBall8:update(ball8)
 		ball8:toFront()
 	end
 end
@@ -358,3 +358,14 @@ display.setStatusBar(display.HiddenStatusBar)
 initView1()
 Runtime:addEventListener("touch", onTouch)
 Runtime:addEventListener("enterFrame", onEnterFrame)
+
+
+local onAccelerometerEvent = function(e)
+	if e.isShake and system.getInfo("platformName") == "Win" then
+		--save screenshot in C:\Users\David\Pictures\Corona Simulator
+		local img = display.captureScreen(true)
+		img:removeSelf()
+		img = nil
+	end
+end
+Runtime:addEventListener("accelerometer", onAccelerometerEvent)
