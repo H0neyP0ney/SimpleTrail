@@ -1,10 +1,10 @@
-# SimpleTrail API Docs
+# SimpleTrail: Plugin API Docs
 
 # Overview
 The SimpleTrail plugin can be used in your Corona project. It allows you to attach a trail to a display object.
 
 # Project Configuration
-Corona Store Activation
+## Corona Store Activation
 In order to use this plugin, you must activate the plugin at the Corona Store.
 
 SDK
@@ -18,10 +18,10 @@ settings =
 	plugins =
 	{
 		-- key is the name passed to Lua's 'require()'
-		["plugin.terrain"] =
+		["plugin.simpleTrail"] =
 		{
 			-- required
-			publisherId = "net.oxonline",
+			publisherId = "com.honeyponey",
 		},
 	},
 }
