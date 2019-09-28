@@ -40,7 +40,7 @@ Some parameters can be added with an optionnal table to create a more complexe t
 local trailTouch = SimpleTrail.newTrail({tex = "trail_touch.png", numPoints = 20, width = 18, widthFinal = 0, sharp = true})
 ```
 
-#### Parameters
+### Parameters:
 `numPoints` (**Number**) : this is the keyframes 
 
 `tex` (**String**) : filename of the trail texture
@@ -79,7 +79,7 @@ All of these parameters can be changed dynamically but might requires another ca
 ```
 trail:update(object, parent)
 ```
-### Parameters
+### Parameters:
 `object` (**GroupObject**) : the object you want the trail to follow
 
 `parent` (**GroupObject**) : the display group where you want your trail to be rendered. You can use the default corona display object display.getCurrentStage() or object.parent
@@ -89,7 +89,7 @@ trail:update(object, parent)
 ```
 trail:setTexture(filePath)
 ```
-### Parameters
+### Parameters:
 `filePath` (**String**) : filename of the new texture
 
 
