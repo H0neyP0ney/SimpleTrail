@@ -65,7 +65,7 @@ local trailTouch = SimpleTrail.newTrail({tex = "trail_touch.png", numPoints = 20
 
 `sharp` (**Boolean**) : If true, the start of the trail is a dot and not a segment (default is `false`).
 
-`color` (**Table**) : color table similar to Corona colors. {r,g,b,a} or {r,g,b} or {c}
+`color` (**Table**) : color table similar to Corona colors. {r,g,b,a} or {r,g,b} or {c} (default is {`1`, `1`, `1`, `1`}).
 
 `color_r` (**Number**) : Red component of trail color (default is `1`).
 
@@ -82,14 +82,14 @@ local trailTouch = SimpleTrail.newTrail({tex = "trail_touch.png", numPoints = 20
 
 # Methods
 
-## trail:update(object, parent)
+## trail:update(object, [parent])
 ```
 trail:update(object, parent)
 ```
 This method actually draws the trail according to `object` last positions to the front of `parent` display group. Use this inside an enterFrame event as the render will be refreshed every frame according to the new `object` keyframe position.
 
 ### Parameters:
-`object` (**GroupObject**) : the object you want the trail to follow
+`object` (**GroupObject**) : the display object you want the trail to be attached.
 
 `parent` (**GroupObject**) : the display group where you want your trail to be rendered. If ommited the trail will be added in `object.parent` display group.
 
