@@ -116,6 +116,6 @@ trail:clear()
 Remove the trail from it's parent display group.
 
 # Limitations
-If the approximate center of the trail is outside of the screen, the all trail will be hidden because of the Corona autocull feature.
-You can't use the same texture file for a scrolling trail and a non scrolling trail
+* If the approximate center of the trail is outside of the screen, the all trail will be hidden because of the Corona autocull feature.
+* You can't use the same texture file for a scrolling trail and a non scrolling trail
 
