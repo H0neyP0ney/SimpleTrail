@@ -31,7 +31,7 @@ settings =
 
 # Functions
 
-## newTrail( [optionnalTable] )
+## newTrail( [optionalTable] )
 ```
 local trail = SimpleTrail.newTrail()
 ```
