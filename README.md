@@ -29,7 +29,7 @@ settings =
 
 # Functions
 
-### newTrail( [optionnalTable] )
+## newTrail( [optionnalTable] )
 ```
 local trail = SimpleTrail.newTrail()
 ```
@@ -67,23 +67,23 @@ All of these parameters can be changed dynamically but might requires another ca
 
 # Methods
 
-### trail:update(object, parent)
+## trail:update(object, parent)
 ```
 trail:update(object, parent)
 ```
-#### Parameters
+### Parameters
 `object` (**GroupObject**) : the object you want the trail to follow
 
 `parent` (**GroupObject**) : the display group where you want your trail to be rendered. You can use the default corona display object display.getCurrentStage() or object.parent
 
-### trail:setTexture(filePath)
+## trail:setTexture(filePath)
 ```
 trail:setTexture(filePath)
 ```
-#### Parameters
+### Parameters
 `filePath` (**String**) : filename of the new texture
 
-### trail:setFillColor(...)
+## trail:setFillColor(...)
 Change the color of the trail. Similar to Corona `:setFillColor()` function.
 ```
 trail:setFillColor(r,g,b,a)
@@ -97,19 +97,19 @@ or
 trail:setFillColor(r,g,b)
 ```
 
-### trail:toFront()
+## trail:toFront()
 ```
 trail:toFront()
 ```
 Put the trail to the front of it's parent display group.
 
-### trail:toBack()
+## trail:toBack()
 ```
 trail:toBack()
 ```
 Put the trail to the back of it's parent display group.
 
-### trail:clear()
+## trail:clear()
 ```
 trail:clear()
 ```
