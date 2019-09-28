@@ -3,7 +3,11 @@
 # Overview
 The SimpleTrail plugin can be used in your Corona project. It allows you to attach a trail to a display object.
 
-This repository contains a Corona project with 5 different examples showing what you can achieve with the plugin. You can preview an HTML5 version here : http://honeyponey.fr/SHARED/SimpleTrail/
+This repository contains a Corona project with 5 different examples showing what you can achieve with the plugin.
+
+[HTML5 version](http://honeyponey.fr/SHARED/SimpleTrail/)
+
+[Demo video](https://youtu.be/C68if9dVEho)
 
 # Project Configuration
 ## Corona Store Activation
