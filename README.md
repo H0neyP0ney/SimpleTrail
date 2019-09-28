@@ -18,10 +18,10 @@ settings =
 	plugins =
 	{
 		-- key is the name passed to Lua's 'require()'
-		["plugin.simpleTrail"] =
+		["plugin.SimpleTrail"] =
 		{
 			-- required
-			publisherId = "com.honeyponey",
+			publisherId = "com.honeyponeygames",
 		},
 	},
 }
