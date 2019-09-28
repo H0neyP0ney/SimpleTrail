@@ -63,6 +63,14 @@ local trailTouch = SimpleTrail.newTrail({tex = "trail_touch.png", numPoints = 20
 
 `sharp` (**Number**) : width of the trail
 
+`color_r` (**Number**) : width of the trail
+
+`color_g` (**Number**) : width of the trail
+
+`color_b` (**Number**) : width of the trail
+
+`color_a` (**Number**) : width of the trail
+
 All of these parameters can be changed dynamically but might requires another call of `trail:update()` to be effective.
 
 # Methods
