@@ -3,6 +3,12 @@
 # Overview
 The SimpleTrail plugin can be used in your Corona project. It allows you to attach a trail to a display object.
 
+This repository contains a Corona project with 5 different examples showing what you can achieve with the plugin.
+
+[HTML5 DEMO](http://honeyponey.fr/SHARED/SimpleTrail/)
+
+[VIDEO TRAILER](https://youtu.be/C68if9dVEho)
+
 # Project Configuration
 ## Corona Store Activation
 In order to use this plugin, you must activate the plugin at the Corona Store.
@@ -29,7 +35,7 @@ settings =
 
 # Functions
 
-## newTrail( [optionnalTable] )
+## newTrail( [optionalTable] )
 ```
 local trail = SimpleTrail.newTrail()
 ```
@@ -63,7 +69,7 @@ local trailTouch = SimpleTrail.newTrail({tex = "trail_touch.png", numPoints = 20
 
 `sharp` (**Boolean**) : If true, the start of the trail is a dot and not a segment (default is `false`).
 
-`color` (**Table**) : color table similar to Corona colors. {r,g,b,a} or {r,g,b} or {c}
+`color` (**Table**) : color table similar to Corona colors. {r,g,b,a} or {r,g,b} or {c} (default is {`1`, `1`, `1`, `1`}).
 
 `color_r` (**Number**) : Red component of trail color (default is `1`).
 
@@ -76,20 +82,20 @@ local trailTouch = SimpleTrail.newTrail({tex = "trail_touch.png", numPoints = 20
 ### NOTES:
 * All of these parameters except `numPoints`, `tex` and `color` can be accessed and changed dynamically but might requires another call of `trail:update()` to be effective.
 * You can change color dynamically by using `trail:setFillColor(...)` method or by changing `color_r`, `color_g`, `color_b`, `color_a` directly.
-* You can't change `scrollSpeed` if you did not initialized the trail with this parameter specified. Althought, you might want a trail to scroll after a moment, so you just have to initialized with `scrollSpeed` equal to 0.
+* You cannot change `scrollSpeed` if you did not initialized the trail with this parameter specified. Althought, you might want a normal trail to scroll only after a moment, so you just have to initialized with `scrollSpeed` equal to 0 so that the plugin understands this will be a scrolling trail and can initialize texture properly.
 
 # Methods
 
-## trail:update(object, parent)
+## trail:update(object, [parent])
 ```
-trail:update(object, parent)
+trail:update(object)
 ```
-This method actually draws the trail according to `object` last positions to the front of `parent` display group. Use this inside an enterFrame event.
+This method actually draws the trail according to `object` last positions to the front of `parent` display group. Use this inside an enterFrame event as the render will be refreshed every frame according to the new `object` keyframe position.
 
 ### Parameters:
-`object` (**GroupObject**) : the object you want the trail to follow
+`object` (**GroupObject**) : the display object you want the trail to be attached.
 
-`parent` (**GroupObject**) : the display group where you want your trail to be rendered. You can use the default corona display object display.getCurrentStage() or object.parent
+`parent` (**GroupObject**) : the display group where you want your trail to be rendered. If ommited the trail will be added in `object.parent` display group.
 
 
 ## trail:setTexture(filePath)
@@ -137,5 +143,5 @@ Remove the trail from it's parent display group.
 
 # Limitations
 * If the approximate center of the trail is outside of the screen, the all trail will be hidden because of the Corona autocull feature.
-* You can't use the same texture file for a scrolling trail and a non scrolling trail
+* You can't use the same texture file for a scrolling trail and a non scrolling trail.
 
