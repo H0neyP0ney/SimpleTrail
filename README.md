@@ -1,9 +1,9 @@
 # SimpleTrail API Docs
 
 # Overview
+The SimpleTrail plugin can be used in your Corona project. It allows you to attach a trail to a display object.
 
 # Project Configuration
-
 Corona Store Activation
 In order to use this plugin, you must activate the plugin at the Corona Store.
 
