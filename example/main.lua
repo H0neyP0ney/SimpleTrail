@@ -1,10 +1,3 @@
---rename nbpoints
---ondulation confettis
-
---doc github et host github
---faire une vidéo
---préparer des screenshot et une icône
-
 local SimpleTrail = require "plugin.SimpleTrail"
 
 local currentView = nil--the display objet which contains the different examples of this demo
